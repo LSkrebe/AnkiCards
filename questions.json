@@ -1,0 +1,286 @@
+[
+  {
+    "question": "What is HTTP?",
+    "answer": "HTTP stands for HyperText Transfer Protocol. It is the standard protocol used for communication between clients and servers on the web. A client sends a request and the server returns a response. APIs commonly use HTTP for communication."
+  },
+  {
+    "question": "Difference between HTTP and HTTPS?",
+    "answer": "HTTPS is HTTP secured with TLS encryption. HTTPS encrypts data in transit, protects against tampering, and verifies server identity through certificates. HTTP sends data in plaintext."
+  },
+  {
+    "question": "What is REST API?",
+    "answer": "A REST API is an HTTP-based API that follows resource-oriented principles and is usually stateless. Resources are accessed through endpoints such as /users/5 using standard HTTP methods like GET, POST, PUT, and DELETE."
+  },
+  {
+    "question": "Why are REST APIs stateless?",
+    "answer": "Stateless means the server does not store client session state between requests. Each request contains all required information such as authentication tokens. This improves scalability and simplifies distributed systems."
+  },
+  {
+    "question": "Difference between authentication and authorization?",
+    "answer": "Authentication verifies who the user is. Authorization determines what the user is allowed to access or perform after authentication."
+  },
+  {
+    "question": "What is JWT?",
+    "answer": "JWT stands for JSON Web Token. It is a signed token commonly used for authentication and authorization. It usually contains user identity, claims, and expiration information. JWTs are signed, not encrypted by default."
+  },
+  {
+    "question": "How are APIs protected from random callers?",
+    "answer": "APIs are commonly protected using authentication mechanisms such as JWT bearer tokens, OAuth access tokens, API keys, rate limiting, HTTPS, and authorization checks."
+  },
+  {
+    "question": "What is middleware in ASP.NET Core?",
+    "answer": "Middleware are components in the HTTP request pipeline that process requests and responses. Examples include authentication, logging, exception handling, and routing middleware."
+  },
+  {
+    "question": "What is idempotency?",
+    "answer": "An operation is idempotent if performing it multiple times produces the same result as performing it once. This is important in distributed and banking systems to prevent duplicate processing during retries."
+  },
+  {
+    "question": "Difference between 401 and 403?",
+    "answer": "401 means the client is not authenticated. 403 means the client is authenticated but does not have permission to access the resource."
+  },
+  {
+    "question": "What is CORS?",
+    "answer": "CORS stands for Cross-Origin Resource Sharing. It is a browser security mechanism controlling whether a frontend from one origin can access resources from another origin."
+  },
+  {
+    "question": "What is .NET?",
+    "answer": ".NET is a software development platform and runtime developed by Microsoft for building applications such as web APIs, backend systems, desktop applications, and cloud services."
+  },
+  {
+    "question": "What is CLR?",
+    "answer": "CLR stands for Common Language Runtime. It executes .NET applications and provides services such as garbage collection, memory management, exception handling, and type safety."
+  },
+  {
+    "question": "What is garbage collection?",
+    "answer": "Garbage collection automatically frees memory occupied by objects that are no longer referenced by the application. This reduces memory leaks and manual memory management complexity."
+  },
+  {
+    "question": "Stack vs heap?",
+    "answer": "The stack stores short-lived data such as method calls and value types. The heap stores dynamically allocated objects and reference types managed by the garbage collector."
+  },
+  {
+    "question": "Abstract class vs interface?",
+    "answer": "An interface defines a contract that implementing classes must follow. An abstract class can provide shared implementation and state. Interfaces are commonly used for abstraction and dependency injection, while abstract classes are used for shared base behavior."
+  },
+  {
+    "question": "What is dependency injection?",
+    "answer": "Dependency injection is a design pattern where dependencies are provided to a class instead of being created inside it. This improves modularity, testing, and maintainability."
+  },
+  {
+    "question": "Why use dependency injection?",
+    "answer": "Dependency injection reduces tight coupling, improves testability, and allows implementations to be replaced more easily."
+  },
+  {
+    "question": "Singleton vs scoped vs transient?",
+    "answer": "Singleton creates one instance for the entire application lifetime. Scoped creates one instance per request. Transient creates a new instance every time it is requested."
+  },
+  {
+    "question": "Why is DbContext usually scoped?",
+    "answer": "DbContext is usually scoped because it represents a unit of work tied to a single request. Sharing it globally can create concurrency and state management problems."
+  },
+  {
+    "question": "What problem does async solve?",
+    "answer": "Async improves scalability and responsiveness for IO-bound operations by preventing threads from being blocked while waiting for operations such as database queries, file access, or API calls."
+  },
+  {
+    "question": "Does async make code faster?",
+    "answer": "Not necessarily. Async mainly improves scalability and responsiveness by freeing threads during waiting operations rather than directly improving raw execution speed."
+  },
+  {
+    "question": "Task vs Thread?",
+    "answer": "A thread is an operating system execution unit. A Task is a higher-level abstraction representing asynchronous work and is commonly managed using the .NET thread pool."
+  },
+  {
+    "question": "CPU-bound vs IO-bound work?",
+    "answer": "CPU-bound work is limited by processor computation and benefits from parallelism. IO-bound work spends time waiting for external resources such as databases, APIs, or files and benefits from async programming."
+  },
+  {
+    "question": "What happens during await?",
+    "answer": "When awaiting an asynchronous operation, the current method pauses without blocking the thread. The thread can return to the thread pool and continue processing other work until the awaited operation completes."
+  },
+  {
+    "question": "What is thread safety?",
+    "answer": "Thread safety means code behaves correctly when accessed concurrently by multiple threads without causing race conditions or corrupted state."
+  },
+  {
+    "question": "What is LINQ?",
+    "answer": "LINQ stands for Language Integrated Query. It allows querying collections and databases using strongly typed C# syntax such as Where, Select, OrderBy, and FirstOrDefault."
+  },
+  {
+    "question": "IEnumerable vs IQueryable?",
+    "answer": "IEnumerable performs operations in memory after data is loaded. IQueryable builds database queries that are executed remotely, allowing filtering and projection directly in the database."
+  },
+  {
+    "question": "What is deferred execution in LINQ?",
+    "answer": "Deferred execution means a LINQ query is not executed immediately when defined. It executes only when the data is actually enumerated."
+  },
+  {
+    "question": "What is exception handling?",
+    "answer": "Exception handling is the process of detecting and managing runtime errors using try, catch, finally, and throw statements to keep applications stable and predictable."
+  },
+  {
+    "question": "throw vs throw ex?",
+    "answer": "Using throw preserves the original stack trace. Using throw ex resets the stack trace, making debugging harder."
+  },
+  {
+    "question": "What is IDisposable?",
+    "answer": "IDisposable is an interface used for releasing unmanaged resources such as file handles, database connections, or network streams."
+  },
+  {
+    "question": "What is DTO?",
+    "answer": "DTO stands for Data Transfer Object. It is used to transfer data between layers or systems without exposing internal domain models directly."
+  },
+  {
+    "question": "What is structured logging?",
+    "answer": "Structured logging stores logs in a machine-readable format with fields and metadata instead of plain text, improving searchability and observability."
+  },
+  {
+    "question": "What is a relational database?",
+    "answer": "A relational database stores data in tables with defined relationships between them using keys and structured schemas."
+  },
+  {
+    "question": "What is an index in databases?",
+    "answer": "An index is a data structure that improves query performance by reducing the amount of data the database needs to scan when searching or sorting records."
+  },
+  {
+    "question": "What are downsides of indexes?",
+    "answer": "Indexes increase storage usage and slow down inserts, updates, and deletes because indexes must also be maintained whenever data changes."
+  },
+  {
+    "question": "What is a transaction?",
+    "answer": "A transaction is a group of database operations that either all succeed or all fail together, ensuring data consistency and reliability."
+  },
+  {
+    "question": "Why are transactions important in banking?",
+    "answer": "Transactions ensure financial operations remain consistent and prevent partial updates that could corrupt balances or payment states."
+  },
+  {
+    "question": "What is ACID?",
+    "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability. These properties ensure reliable and consistent database transactions."
+  },
+  {
+    "question": "What is ORM?",
+    "answer": "ORM stands for Object Relational Mapping. It maps database tables to application objects, simplifying database access using application code instead of raw SQL."
+  },
+  {
+    "question": "What is Entity Framework?",
+    "answer": "Entity Framework is a .NET ORM that allows developers to work with databases using C# objects and LINQ instead of writing raw SQL queries manually."
+  },
+  {
+    "question": "What is hashing vs encryption?",
+    "answer": "Hashing is a one-way operation used for integrity and password verification. Encryption is reversible using keys and is used to protect confidential data."
+  },
+  {
+    "question": "Symmetric vs asymmetric encryption?",
+    "answer": "Symmetric encryption uses the same key for encryption and decryption. Asymmetric encryption uses a public and private key pair."
+  },
+  {
+    "question": "What is AES?",
+    "answer": "AES is a widely used symmetric encryption algorithm commonly used for securing data at rest and in transit."
+  },
+  {
+    "question": "What is RSA?",
+    "answer": "RSA is an asymmetric cryptographic algorithm commonly used for secure key exchange and digital signatures."
+  },
+  {
+    "question": "What is digital signature?",
+    "answer": "A digital signature verifies authenticity and integrity by signing data with a private key and validating it using the corresponding public key."
+  },
+  {
+    "question": "Why is SHA256 alone bad for passwords?",
+    "answer": "SHA256 is designed to be fast, making brute-force attacks easier. Password hashing should use slow adaptive algorithms such as bcrypt, Argon2, or PBKDF2 with salting."
+  },
+  {
+    "question": "What is salting passwords?",
+    "answer": "Salting adds random data to passwords before hashing to prevent rainbow table attacks and ensure identical passwords produce different hashes."
+  },
+  {
+    "question": "What is replay attack?",
+    "answer": "A replay attack occurs when a valid request or token is captured and resent by an attacker to repeat an action fraudulently."
+  },
+  {
+    "question": "How prevent replay attacks?",
+    "answer": "Replay attacks can be mitigated using timestamps, nonces, token expiration, one-time tokens, and signed requests."
+  },
+  {
+    "question": "What is key rotation?",
+    "answer": "Key rotation is the practice of periodically replacing cryptographic keys to reduce exposure if a key becomes compromised."
+  },
+  {
+    "question": "What is HSM?",
+    "answer": "HSM stands for Hardware Security Module. It is a dedicated device used for securely storing and managing cryptographic keys and performing cryptographic operations."
+  },
+  {
+    "question": "Why not create custom crypto?",
+    "answer": "Custom cryptography is dangerous because cryptographic systems are difficult to design securely. Proven and audited industry-standard algorithms and libraries should be used instead."
+  },
+  {
+    "question": "What is least privilege?",
+    "answer": "Least privilege means systems and users should only have the minimum permissions required to perform their tasks, reducing security risks."
+  },
+  {
+    "question": "What is audit logging?",
+    "answer": "Audit logging records important security and business events such as authentication, authorization, data changes, and financial operations for traceability and compliance."
+  },
+  {
+    "question": "What is Docker?",
+    "answer": "Docker is a containerization platform that packages applications with their dependencies into portable containers, ensuring consistent behavior across environments."
+  },
+  {
+    "question": "Image vs container?",
+    "answer": "An image is a reusable template containing application code and dependencies. A container is a running instance of an image."
+  },
+  {
+    "question": "Container vs virtual machine?",
+    "answer": "Containers share the host operating system kernel and are lightweight. Virtual machines include full guest operating systems and are heavier but provide stronger isolation."
+  },
+  {
+    "question": "What is Kubernetes?",
+    "answer": "Kubernetes is a container orchestration platform used for automating deployment, scaling, recovery, and management of containerized applications."
+  },
+  {
+    "question": "What is AWS?",
+    "answer": "AWS is Amazon Web Services, a cloud platform providing infrastructure and managed services such as compute, storage, networking, databases, and security."
+  },
+  {
+    "question": "What is CI/CD?",
+    "answer": "CI/CD stands for Continuous Integration and Continuous Deployment or Delivery. It automates building, testing, and deploying software changes."
+  },
+  {
+    "question": "Why automated testing important?",
+    "answer": "Automated testing reduces regressions, improves deployment confidence, and helps maintain reliability in production systems."
+  },
+  {
+    "question": "Why secrets should not be hardcoded?",
+    "answer": "Hardcoded secrets can leak through source control, logs, or deployments. Secrets should be managed securely using environment variables or secret management systems."
+  },
+  {
+    "question": "Logs vs metrics vs tracing?",
+    "answer": "Logs provide detailed event information, metrics provide aggregated numerical system data, and tracing follows requests across distributed systems to diagnose latency and failures."
+  },
+  {
+    "question": "User says API is slow. What do you check first?",
+    "answer": "I would first verify whether the issue is widespread or isolated, then check dashboards and metrics for latency, CPU, memory, database load, and error rates. After that I would inspect logs, recent deployments, and external dependencies to narrow down the root cause."
+  },
+  {
+    "question": "Service crashes after deployment. What do you do?",
+    "answer": "I would check deployment logs, application logs, monitoring dashboards, and recent changes. If necessary I would roll back the deployment to restore stability while investigating the root cause."
+  },
+  {
+    "question": "What is correlation ID?",
+    "answer": "A correlation ID is a unique identifier attached to requests so related logs and traces across services can be linked together for debugging and observability."
+  },
+  {
+    "question": "Why retries dangerous in banking systems?",
+    "answer": "Retries can accidentally duplicate financial operations such as payments or transfers. Banking systems therefore require idempotency and careful retry handling."
+  },
+  {
+    "question": "How would you design secure signing service?",
+    "answer": "I would secure the API using authentication and authorization, use industry-standard cryptographic libraries, securely store keys using HSM or secret management, enforce audit logging, rate limiting, monitoring, and support key rotation and high availability."
+  },
+  {
+    "question": "What makes backend service production-ready?",
+    "answer": "A production-ready backend service includes proper logging, monitoring, testing, security, scalability, fault tolerance, CI/CD automation, observability, and operational documentation."
+  }
+]

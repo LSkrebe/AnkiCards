@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anki (Simple)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <div class="top">
+        <div class="meta">
+          <div id="progress" class="progress">Loading…</div>
+          <button id="restartBtn" class="btn btn-secondary" type="button" hidden>
+            Restart
+          </button>
+        </div>
+
+        <h1 id="question" class="question">—</h1>
+      </div>
+
+      <section class="answerArea">
+        <label class="label" for="myAnswer">Your answer</label>
+        <textarea
+          id="myAnswer"
+          class="textarea"
+          placeholder="Type your answer here…"
+          rows="7"
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="actions">
+          <button id="showAnswerBtn" class="btn" type="button">Show answer</button>
+        </div>
+
+        <div id="reveal" class="reveal" hidden>
+          <div class="label">Correct answer</div>
+          <div id="correctAnswer" class="correctAnswer"></div>
+
+          <div class="grade">
+            <button id="wrongBtn" class="btn btn-secondary" type="button">
+              I was wrong
+            </button>
+            <button id="rightBtn" class="btn" type="button">I was right</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="done" class="done" hidden>
+        <div class="doneTitle">All correct.</div>
+        <div class="doneSubtitle">You cleared the full set.</div>
+      </section>
+
+      <section id="error" class="error" hidden>
+        <div class="errorTitle">Couldn’t load questions.</div>
+        <div id="errorBody" class="errorBody"></div>
+        <div class="errorHint">
+          Run a local server (see <code>README.md</code>) — browsers block
+          <code>file://</code> JSON fetching.
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
