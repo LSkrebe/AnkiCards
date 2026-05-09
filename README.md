@@ -1,6 +1,6 @@
 # AnkiCards
 
-A minimal black-and-white web app for practicing flashcards: read a question, type your answer, reveal the correct answer, and self-grade. Questions come from `questions.json`.
+Anki-style questionnaire to prepare for anything — a minimal black-and-white web app: read a question, type your answer, reveal the correct answer, and self-grade. Questions come from `questions.json`.
 
 **Repository:** [github.com/LSkrebe/AnkiCards](https://github.com/LSkrebe/AnkiCards)
 
